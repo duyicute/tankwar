@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{23409CCA-7D87-4F5F-95D4-63EF81B86EBC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>tank</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Back.h" />
+    <ClInclude Include="BigTank.h" />
+    <ClInclude Include="FoeTank.h" />
+    <ClInclude Include="FoeTankBox.h" />
+    <ClInclude Include="GameApp.h" />
+    <ClInclude Include="Gunner.h" />
+    <ClInclude Include="GuunerBox.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SmallTank.h" />
+    <ClInclude Include="sys.h" />
+    <ClInclude Include="TankApp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tank.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\grassland.bmp" />
+    <Image Include="res\Greendown.bmp" />
+    <Image Include="res\Greenleft.bmp" />
+    <Image Include="res\Greenright.bmp" />
+    <Image Include="res\Greenup.bmp" />
+    <Image Include="res\gunner.bmp" />
+    <Image Include="res\gunnerdown.bmp" />
+    <Image Include="res\gunnerleft.bmp" />
+    <Image Include="res\gunnerright.bmp" />
+    <Image Include="res\gunnerup.bmp" />
+    <Image Include="res\person.bmp" />
+    <Image Include="res\river.bmp" />
+    <Image Include="res\silverydown.bmp" />
+    <Image Include="res\silveryleft.bmp" />
+    <Image Include="res\silveryright.bmp" />
+    <Image Include="res\silveryup.bmp" />
+    <Image Include="res\stone.bmp" />
+    <Image Include="res\wall.bmp" />
+    <Image Include="res\Yellowdown.bmp" />
+    <Image Include="res\Yellowdown0.bmp" />
+    <Image Include="res\Yellowleft.bmp" />
+    <Image Include="res\Yellowleft0.bmp" />
+    <Image Include="res\Yellowright.bmp" />
+    <Image Include="res\Yellowright0.bmp" />
+    <Image Include="res\Yellowup.bmp" />
+    <Image Include="res\Yellowup0.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Back.cpp" />
+    <ClCompile Include="BigTank.cpp" />
+    <ClCompile Include="FoeTank.cpp" />
+    <ClCompile Include="FoeTankBox.cpp" />
+    <ClCompile Include="Gunner.cpp" />
+    <ClCompile Include="GuunerBox.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SmallTank.cpp" />
+    <ClCompile Include="TankApp.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
