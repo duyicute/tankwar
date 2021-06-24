@@ -1,4 +1,4 @@
 # tankwar
 
-#c++
-#visual studio 2012
+c++
+visual studio 2012
